@@ -32,7 +32,7 @@ ludo-mern/
 ```bash
 cd backend
 npm install
-cp .env.example .env      # then edit MONGO_URI / JWT_SECRET if needed
+ .env      # then edit MONGO_URI / JWT_SECRET if needed
 npm run dev                # or: npm start
 ```
 
@@ -44,7 +44,7 @@ or a connection string from MongoDB Atlas.
 ```bash
 cd frontend
 npm install
-cp .env.example .env      # point VITE_API_URL at your backend if not localhost
+ .env      # point VITE_API_URL at your backend if not localhost
 npm run dev
 ```
 
