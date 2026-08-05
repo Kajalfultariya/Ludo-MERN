@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+    origin: process.env.CLIENT_ORIGIN || "http://localhost:5176",
   })
 );
 app.use(express.json());
@@ -22,7 +22,7 @@ app.use("/api/game", gameRoutes);
 
 app.use((req, res) => res.status(404).json({ message: "Route not found" }));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5176;
 
 connectDB().then(() => {
   app.listen(PORT, () => console.log(`[server] Listening on port ${PORT}`));
