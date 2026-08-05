@@ -6,14 +6,9 @@ import authRoutes from "./routes/authRoutes.js";
 import gameRoutes from "./routes/gameRoutes.js";
 
 dotenv.config();
-
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGIN || "http://localhost:5176",
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
