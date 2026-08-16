@@ -11,7 +11,7 @@ function RequireAuth({ children }) {
   if (loading) return <div className="loading-screen">Loading…</div>;
   if (!user) return <Navigate to="/login" replace />;
   return children;
-}
+}   
 
 export default function App() {
   return (
